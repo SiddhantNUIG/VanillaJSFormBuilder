@@ -1,0 +1,19 @@
+# OS/filesystem metadata files
+.DS_Store
+
+# IntelliJ files
+*.iml
+.idea/
+.settings
+.project
+.vscode
+
+# NPM directories
+**/node_modules/
+**/.npmrc
+
+# Build and output directories
+**/dist/main.js
+/build/
+/coverage/
+/jest-cache/

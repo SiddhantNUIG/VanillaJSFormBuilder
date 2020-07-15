@@ -1,0 +1,30 @@
+{
+  "cacheDirectory": "./jest-cache",
+  "testMatch": [
+    "<rootDir>/src/**/__tests__/*.test.js",
+    "<rootDir>/src/**/*.test.js"
+  ],
+  "testPathIgnorePatterns": [
+    "/build/"
+  ],
+  "moduleFileExtensions": [
+    "js",
+    "json"
+  ],
+  "coverageReporters": [
+    "html",
+    "json",
+    "text"
+  ],
+  "coveragePathIgnorePatterns": [],
+  "coverageDirectory": "build/coverage",
+  "collectCoverageFrom": [
+    "src/**/*.js"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "statements": 90
+    }
+  },
+  "verbose": false
+}

@@ -1,0 +1,40 @@
+{
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "env": {
+        "browser": true,
+        "node": true,
+        "jest": true
+      },
+    "rules": {
+        "template-curly-spacing": "off",
+        "no-bitwise": [
+          "error",
+          {
+            "int32Hint": true
+          }
+        ],
+        "no-console": "off",
+        "no-plusplus": [
+          "error",
+          {
+            "allowForLoopAfterthoughts": true
+          }
+        ],
+        "import/no-extraneous-dependencies": [
+          "error",
+          {
+            "devDependencies": true
+          }
+        ],
+        "import/prefer-default-export": 0,
+        "import/no-named-as-default": "off",
+        "guard-for-in": "off",
+        "no-restricted-syntax": "off",
+        "linebreak-style": "off",
+        "import/no-cycle": "off",
+        "no-tabs": "off",
+        "no-prototype-builtins": "off",
+        "no-param-reassign": "off"
+      }
+}

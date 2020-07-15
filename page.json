@@ -1,0 +1,133 @@
+{
+  "page": {
+    "form": {
+      "label": "Edit Address",
+      "widget_name": "form",
+      "children": [
+        {
+          "label": "First Name",
+          "value": "Homer",
+          "required": "1",
+          "id": "first_name",
+          "widget_name": "text_input"
+        },
+        {
+          "label": "Last Name",
+          "value": "Simpson",
+          "required": "1",
+          "id": "last_name",
+          "widget_name": "text_input"
+        },
+        {
+          "label": "Address 1",
+          "value": "123 Fake St.",
+          "required": "1",
+          "id": "address1",
+          "widget_name": "text_input"
+        },
+        {
+          "label": "Address 2",
+          "required": "0",
+          "id": "address2",
+          "widget_name": "text_input"
+        },
+        {
+          "label": "City",
+          "value": "Springfield",
+          "required": "1",
+          "id": "city",
+          "widget_name": "text_input"
+        },
+        {
+          "label": "State",
+          "required": "1",
+          "id": "state",
+          "widget_name": "select_one",
+          "value": "",
+          "items": [
+            { "value": "Alabama" },
+            { "value": "Alaska" },
+            { "value": "American Samoa" },
+            { "value": "Arizona" },
+            { "value": "Arkansas" },
+            { "value": "California" },
+            { "value": "Colorado" },
+            { "value": "Connecticut" },
+            { "value": "Delaware" },
+            { "value": "District of Columbia" },
+            { "value": "Florida" },
+            { "value": "Georgia" },
+            { "value": "Guam" },
+            { "value": "Hawaii" },
+            { "value": "Idaho" },
+            { "value": "Illinois" },
+            { "value": "Indiana" },
+            { "value": "Iowa" },
+            { "value": "Kansas" },
+            { "value": "Kentucky" },
+            { "value": "Louisiana" },
+            { "value": "Maine" },
+            { "value": "Maryland" },
+            { "value": "Massachusetts" },
+            { "value": "Michigan" },
+            { "value": "Minnesota" },
+            { "value": "Mississippi" },
+            { "value": "Missouri" },
+            { "value": "Montana" },
+            { "value": "Nebraska" },
+            { "value": "Nevada" },
+            { "value": "New Hampshire" },
+            { "value": "New Jersey" },
+            { "value": "New Mexico" },
+            { "value": "New York" },
+            { "value": "North Carolina" },
+            { "value": "North Dakota" },
+            { "value": "Northern Marianas Islands" },
+            { "value": "Ohio" },
+            { "value": "Oklahoma" },
+            { "value": "Oregon" },
+            { "value": "Pennsylvania" },
+            { "value": "Puerto Rico" },
+            { "value": "Rhode Island" },
+            { "value": "South Carolina" },
+            { "value": "South Dakota" },
+            { "value": "Tennessee" },
+            { "value": "Texas" },
+            { "value": "Utah" },
+            { "value": "Vermont" },
+            { "value": "Virginia" },
+            { "value": "Virgin Islands" },
+            { "value": "Washington" },
+            { "value": "West Virginia" },
+            { "value": "Wisconsin" },
+            { "value": "Wyoming" }
+          ]
+        },
+        {
+          "label": "Zip",
+          "value": "12345",
+          "required": "1",
+          "id": "zip",
+          "widget_name": "text_input"
+        }   
+      ]
+    },
+    "hbox": {
+      "widget_name": "hbox",
+      "children": [
+        {
+          "action": "/submit",
+          "label": "Submit",
+          "validate": "1",
+          "widget_name": "button"
+        },
+        {
+          "action": "/cancel",
+          "label": "Cancel",
+          "validate": "0",
+          "widget_name" : "button"
+        }
+      ]
+    }
+  }
+}
