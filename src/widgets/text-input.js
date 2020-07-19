@@ -4,7 +4,7 @@ export const textInputFactory = (widgetJson, model) => {
   const data = createModelObject(widgetJson, model);
   const div = document.createElement('div');
   const input = document.createElement('input');
-
+  input.id = data.id
   if (data.value != null) {
     input.value = data.value;
   }

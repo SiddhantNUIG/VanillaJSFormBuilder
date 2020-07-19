@@ -1,7 +1,10 @@
+import { errorGenerator } from "../widgets/error";
+import { removeAllChildren } from "../renderer/renderer";
+
 export const submitForm = async (uri, postData) => {
   try {
     const response = await fetch(uri, {
-      method: 'post',
+      method: "post",
       body: JSON.stringify(postData),
     });
     const responseText = await response.text();
@@ -12,15 +15,21 @@ export const submitForm = async (uri, postData) => {
   }
 };
 
+export const errorFactory = (errData) => {
+  const errorDiv = document.getElementById("error");
+  removeAllChildren(errorDiv);
+  errData.forEach((err) => errorDiv.appendChild(errorGenerator(err)));
+};
+
 export const generateRow = (widgetLabel) => {
   if (widgetLabel == null) return null;
 
-  const tr = document.createElement('tr');
-  const labelCell = document.createElement('td');
-  const span = document.createElement('span');
+  const tr = document.createElement("tr");
+  const labelCell = document.createElement("td");
+  const span = document.createElement("span");
   const label = widgetLabel;
   span.textContent = label;
-  span.style.float = 'right';
+  span.style.float = "right";
 
   labelCell.appendChild(span);
   tr.appendChild(labelCell);
@@ -31,7 +40,7 @@ export const generateRow = (widgetLabel) => {
 export const generateWidgetColumn = (widget) => {
   if (widget == null) return null;
 
-  const widgetColumn = document.createElement('td');
+  const widgetColumn = document.createElement("td");
   widgetColumn.appendChild(widget);
 
   return widgetColumn;

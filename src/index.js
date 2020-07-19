@@ -1,6 +1,6 @@
 import { render } from './renderer/renderer';
 
-const loadPage = async (page) => {
+export const loadPage = async (page) => {
   const response = await fetch(page);
 
   if (response.status !== 200) {

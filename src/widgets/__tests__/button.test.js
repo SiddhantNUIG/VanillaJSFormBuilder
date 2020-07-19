@@ -1,24 +1,26 @@
-import { buttonFactory } from '../button';
-import * as utils from '../../utils/utils';
+import { buttonFactory } from "../button";
+import * as utils from "../../utils/utils";
 
-describe('test the submit button', () => {
+describe("test the submit button", () => {
   const mockWidgetJson = {
-    action: '/submit',
-    label: 'Submit',
-    validate: '1',
-    widget_name: 'button',
+    action: "/submit",
+    label: "Submit",
+    validate: "1",
+    widget_name: "button",
   };
 
-  test('submits the form when all required values are filled in', () => {
+  test("submits the form when all required values are filled in", () => {
     utils.submitForm = jest.fn();
-
+    const div = document.createElement("div");
+    div.id = "error";
+    document.body.appendChild(div);
     const mockModel = {
       city: {
-        label: 'City',
-        value: 'Dublin',
-        required: '1',
-        id: 'city',
-        widget_name: 'text_input',
+        label: "City",
+        value: "Dublin",
+        required: "1",
+        id: "city",
+        widget_name: "text_input",
       },
     };
 
@@ -28,16 +30,16 @@ describe('test the submit button', () => {
     expect(utils.submitForm).toBeCalled();
   });
 
-  test('does not submit the form when a required value is empty', () => {
+  test("does not submit the form when a required value is empty", () => {
     utils.submitForm = jest.fn();
 
     const mockModel = {
       city: {
-        label: 'City',
-        value: '',
-        required: '1',
-        id: 'city',
-        widget_name: 'text_input',
+        label: "City",
+        value: "",
+        required: "1",
+        id: "city",
+        widget_name: "text_input",
       },
     };
 

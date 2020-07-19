@@ -2,7 +2,7 @@ import { buttonFactory } from '../widgets/button';
 import { formFactory } from '../widgets/form';
 import { hboxFactory } from '../widgets/hbox';
 import { textInputFactory } from '../widgets/text-input';
-import { unimplementedWidgetFactory } from '../widgets/unimplemented_widget';
+import { selectOneFactory } from '../widgets/select_one'; //selectOneFactory import 
 
 let widgetFactories;
 
@@ -10,8 +10,6 @@ export const getRenderer = (widgetJson, pageModel) => {
   if (widgetFactories.hasOwnProperty(widgetJson.widget_name)) {
     return widgetFactories[widgetJson.widget_name](widgetJson, pageModel);
   }
-
-  return unimplementedWidgetFactory(widgetJson, pageModel);
 };
 
 export const processChildren = (page, pageModel) => {
@@ -39,6 +37,7 @@ export const parsePage = (json, pageModel) => {
       text_input: textInputFactory,
       hbox: hboxFactory,
       button: buttonFactory,
+      select_one: selectOneFactory
     };
   }
 

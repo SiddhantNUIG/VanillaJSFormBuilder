@@ -36,5 +36,5 @@ test('test render', () => {
   pageParser.parsePage = jest.fn().mockReturnValueOnce(views);
   render(json, htmlElement);
 
-  expect(htmlElement.innerHTML).toEqual('<div></div><button></button>');
+  expect(htmlElement.innerHTML).toEqual('<div></div><button></button><div id="error"></div>');
 });
